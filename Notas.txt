@@ -1,3 +1,30 @@
 Primera linea con comandos basicos de git
 1.-git init
 2.-git commit
+
+Una vez creado el .gitignore es momento de convertir este folder en un repositorio de git.
+
+> git init
+
+Ahora hay que añadir los archivos a git.
+
+> git add .
+
+Una vez añadidos los archivos hay que commit estos cambios e incluir un mensaje que nos deje saber de que se trata.
+
+> git commit -m ‘Import Inicial de archivos’
+
+Listo ya tienes el proyecto en repositorio de git.
+
+Hacer cambios
+Ahora la parte mas importante como hacer cambios a los archivos y hacer nuevos “commits”. Para ver el status del repositorio puedes hacer:
+
+> git status
+
+En este punto el resultado debería ser: “nothing to commit (working directory clean)”. Para ver un listado de los commit que has hecho puedes:
+
+> git log
+
+Esto debería producir una lista con los commits que se han hecho (en este caso solo uno) con los comentarios que añadimos. Además debes ver un hash de cada commit. Este hash es el numero de versión de ese commit. El hash se produce basado en la estructura del repositiorio entero al momento del commit. Mas adelante hablaremos del commit hash.
+
+Ahora voy a editar un file del proyecto en mi editor de texto favorito 
