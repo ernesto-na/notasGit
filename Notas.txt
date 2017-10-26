@@ -1,3 +1,74 @@
 Primera linea con comandos basicos de git
 1.-git init
 2.-git commit
+
+Instalar Git
+Para instalar git usé la version binaria que bajé desde el site de git (http://git-scm.com/download). La instalación fue muy simple, en unos minutos ya estaba en el terminal probando los features. Una vez instalado debes probar que esté funcionando. Para esto llamamos a Git desde el terminal a ver si responde.
+
+> git
+
+Este comando debe producir una lista de los comandos mas comunes que usa git. Ahora veamos que versión tenemos.
+
+> git version
+
+Esto debe producir el numero de versión que instalamos. En mi caso versión 1.6.5.2
+
+Para buscar ayuda sobre git siempre puedes usar el comando de ayuda.
+
+> git help log
+
+o
+
+> man git-log
+
+Configurar las variables globales de git
+Una vez te asegures que git esta funcionando es el momento de asignas las variables globales. Estas son unas variables que se le asignan a todos los repositorios que creas. Es importante mencionar que estas variables se pueden cambiar a proyectos por individual. Para configurar el nombre y correo electrónico hacemos lo siguiente.
+
+> git config –global user.name “Tu Nombre Aquí”
+> git config –global user.email tunombre@example.com
+
+Crear un Repositorio
+
+Para este ejemplo usaré un proyecto nuevo que cree en Ruby on Rails pero básicamente puede ser cualquier folder con algunos archivos dentro.
+
+Voy a crear un proyecto de RoR pero puedes crear cualquier folder con algunos archivos de texto dentro.
+
+> rails SampleProject
+> cd SampleProject
+
+En este punto me gusta crear un file que se llama .gitignore que es una lista de los files que git debe ignorar. Aquí solo voy a decirle a git que ignore un solo tipo de archivo los que se llamen .DS_Strore que Mac OS pone en todos los directorios. Este file (.gitignore) lo puedes crear en cualquier aplicación pero en este ejemplo lo voy a hacer usando el command line.
+
+> echo ‘.DS_Store’ > .gitignore
+
+Una vez creado el .gitignore es momento de convertir este folder en un repositorio de git.
+
+> git init
+
+Ahora hay que añadir los archivos a git.
+
+> git add .
+
+Una vez añadidos los archivos hay que commit estos cambios e incluir un mensaje que nos deje saber de que se trata.
+
+> git commit -m ‘Import Inicial de archivos’
+
+Listo ya tienes el proyecto en repositorio de git.
+
+Hacer cambios
+Ahora la parte mas importante como hacer cambios a los archivos y hacer nuevos “commits”. Para ver el status del repositorio puedes hacer:
+
+> git status
+
+En este punto el resultado debería ser: “nothing to commit (working directory clean)”. Para ver un listado de los commit que has hecho puedes:
+
+> git log
+
+Esto debería producir una lista con los commits que se han hecho (en este caso solo uno) con los comentarios que añadimos. Además debes ver un hash de cada commit. Este hash es el numero de versión de ese commit. El hash se produce basado en la estructura del repositiorio entero al momento del commit. Mas adelante hablaremos del commit hash.
+
+Ahora voy a editar un file del proyecto en mi editor de texto favorito Textmate.
+
+> mate README
+
+Esto abre el file en Textmate. Borré todo el texto y solo añadí una linea que lee: “Sample Project 1”. Luego save y cierro Textmate por el momento. Ahora que este archivo cambio vamos a ver como git refleja los cambios.
+
+> git status
