@@ -28,3 +28,14 @@ En este punto el resultado debería ser: “nothing to commit (working directory
 Esto debería producir una lista con los commits que se han hecho (en este caso solo uno) con los comentarios que añadimos. Además debes ver un hash de cada commit. Este hash es el numero de versión de ese commit. El hash se produce basado en la estructura del repositiorio entero al momento del commit. Mas adelante hablaremos del commit hash.
 
 Ahora voy a editar un file del proyecto en mi editor de texto favorito 
+
+-------------------
+Sólo debes hacer git checkout commitC donde commitC es el hash de dicho commit.
+
+Ejemplo:
+
+Buscas en el log de git cuál es el commit al que quieres regresar:
+
+git log
+
+Tendrás algo como esto:
