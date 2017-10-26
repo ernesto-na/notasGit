@@ -75,3 +75,4 @@ Esto abre el file en Textmate. Borré todo el texto y solo añadí una linea que
 
 
 git checkout eb9b03c
+Me cambie a una nueva rama
