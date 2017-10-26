@@ -72,3 +72,6 @@ Ahora voy a editar un file del proyecto en mi editor de texto favorito Textmate.
 Esto abre el file en Textmate. Borré todo el texto y solo añadí una linea que lee: “Sample Project 1”. Luego save y cierro Textmate por el momento. Ahora que este archivo cambio vamos a ver como git refleja los cambios.
 
 > git status
+
+
+git checkout eb9b03c
