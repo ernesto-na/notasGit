@@ -1,0 +1,7 @@
+pararse en la rama a la que me voy a traer todos las cosas nuevas
+
+
+git merge rama_a_fusionar
+
+git diff archivo
+
