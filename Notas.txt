@@ -2,6 +2,7 @@ Primera linea con comandos basicos de git
 1.-git init
 2.-git commit
 
+<<<<<<< HEAD
 Instalar Git
 Para instalar git usé la version binaria que bajé desde el site de git (http://git-scm.com/download). La instalación fue muy simple, en unos minutos ya estaba en el terminal probando los features. Una vez instalado debes probar que esté funcionando. Para esto llamamos a Git desde el terminal a ver si responde.
 
@@ -40,6 +41,8 @@ En este punto me gusta crear un file que se llama .gitignore que es una lista de
 
 > echo ‘.DS_Store’ > .gitignore
 
+=======
+>>>>>>> master
 Una vez creado el .gitignore es momento de convertir este folder en un repositorio de git.
 
 > git init
@@ -65,6 +68,7 @@ En este punto el resultado debería ser: “nothing to commit (working directory
 
 Esto debería producir una lista con los commits que se han hecho (en este caso solo uno) con los comentarios que añadimos. Además debes ver un hash de cada commit. Este hash es el numero de versión de ese commit. El hash se produce basado en la estructura del repositiorio entero al momento del commit. Mas adelante hablaremos del commit hash.
 
+<<<<<<< HEAD
 Ahora voy a editar un file del proyecto en mi editor de texto favorito Textmate.
 
 > mate README
@@ -94,3 +98,17 @@ Me cambie a una nueva rama
 
 
 
+=======
+Ahora voy a editar un file del proyecto en mi editor de texto favorito 
+
+-------------------
+Sólo debes hacer git checkout commitC donde commitC es el hash de dicho commit.
+
+Ejemplo:
+
+Buscas en el log de git cuál es el commit al que quieres regresar:
+
+git log
+
+Tendrás algo como esto:
+>>>>>>> master
